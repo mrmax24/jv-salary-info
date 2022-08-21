@@ -60,8 +60,9 @@
                         <target>${jdk.version}</target>
                         <encoding>${project.build.sourceEncoding}</encoding>
                     </configuration>
-      </plugin>
-             </pluginManagement>
-         </build>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
