@@ -20,10 +20,10 @@ public class SalaryInfo {
             int salary = 0;
             for (String line : data) {
                 rowSplitedData = line.split(" ");
-                LocalDate currentDate = LocalDate.parse(rowSplitedData[DATE_POSITION], FORMATTER);
+                LocalDate date = LocalDate.parse(rowSplitedData[DATE_POSITION], FORMATTER);
                 if (name.equals(rowSplitedData[NAME_POSITION])) {
-                    if (currentDate.isEqual(localDateFrom) || currentDate.isAfter(localDateFrom)
-                            && (currentDate.isEqual(localDateTo) || currentDate.isBefore(localDateTo))) {
+                    if (date.isEqual(localDateFrom) || date.isAfter(localDateFrom)
+                            && (date.isEqual(localDateTo) || date.isBefore(localDateTo))) {
                         salary += (Integer.parseInt(rowSplitedData[HOURS_POSITION])
                                 * Integer.parseInt(rowSplitedData[SALARY_POSITION]));
                     }
